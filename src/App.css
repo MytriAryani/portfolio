@@ -1,0 +1,161 @@
+body, html, #root {
+  cursor: none;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  /* cursor: none; // Uncomment if you want to hide the cursor */
+}
+
+/* Hide horizontal scrollbar for all browsers */
+body::-webkit-scrollbar {
+  width: 8px;
+  background: #f3e8ff;
+}
+body::-webkit-scrollbar-thumb {
+  background: #a78bfa;
+  border-radius: 10px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #a78bfa #f3e8ff;
+}
+
+/* ...rest of your custom styles (skill-card, contact-envelope, etc.) ... */
+
+
+
+.skill-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid #a78bfa; /* Violet border */
+  background: #fff;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), border-color 0.2s;
+  z-index: 0;
+}
+
+.skill-card::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  z-index: 2;
+  /* The shine: a thin, moving linear gradient bar */
+  background: linear-gradient(
+    120deg,
+    rgba(167,139,250,0) 0%,
+    rgba(167,139,250,0.3) 40%,
+    rgba(255,255,255,0.9) 50%,
+    rgba(167,139,250,0.3) 60%,
+    rgba(167,139,250,0) 100%
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.skill-card:hover {
+  border-color: #a78bfa;
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+  animation: shine-trail 1.2s linear;
+}
+
+@keyframes shine-trail {
+  0% {
+    background-position: -100% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+
+
+
+
+.contact-envelope {
+  position: relative;
+  width: 340px;
+  height: 220px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(99,102,241,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.contact-envelope::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 32px;
+  background: radial-gradient(circle at 60% 40%, #fff 40%, rgba(255,255,255,0) 100%);
+  opacity: 0.4;
+  filter: blur(2px);
+  border-radius: 0 0 2rem 2rem;
+}
+
+.contact-bubble {
+  position: absolute;
+  right: -40px;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: float-bubble 6s ease-in-out infinite;
+}
+
+@keyframes float-bubble {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-18px) scale(1.08);}
+}
+
+.confetti {
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.confetti.active {
+  opacity: 1;
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

@@ -6,7 +6,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100vh] flex flex-col md:flex-row justify-center items-center bg-white overflow-hidden px-4"
     >
-      {/* Name Block */}
+     
       <div className="flex-1 w-full flex flex-col justify-center items-center md:items-end md:pr-12">
         <motion.h1
           initial={{ opacity: 0, x: -60 }}
@@ -26,7 +26,7 @@ export default function Hero() {
           </span>
         </motion.h1>
       </div>
-      {/* Tagline Block */}
+     
       <div className="flex-1 w-full flex flex-col justify-center items-center md:items-start mt-2 md:mt-0 md:pl-12">
         <motion.div
           initial={{ opacity: 0, x: 60 }}
@@ -34,7 +34,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3 }}
           className="relative flex flex-col items-center md:items-start w-full"
         >
-          {/* Animated vertical bar accent */}
+       
           <motion.div
             className="hidden md:block absolute -left-6 top-0 h-full w-2 rounded bg-gradient-to-b from-indigo-500 via-fuchsia-400 to-purple-400"
             initial={{ scaleY: 0.3, opacity: 0.6 }}
@@ -50,7 +50,7 @@ export default function Hero() {
           </span>
         </motion.div>
       </div>
-      {/* Cursor-following highlight for desktop */}
+      
       <style>{`
         @media (pointer: fine) {
           #hero h1 span:hover {

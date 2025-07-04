@@ -29,7 +29,7 @@ coding skills,<span className="font-semibold"> increasing session attendence by 
       </>
     ),
   },
-  // Add more timeline entries as needed
+  
 ];
 
 export default function Experience() {
@@ -37,7 +37,7 @@ export default function Experience() {
     <section id="experience" className="py-16 px-4 max-w-3xl mx-auto">
       <SectionHeading>Experience</SectionHeading>
       <div className="relative pl-8">
-        {/* Animated vertical line */}
+      
         <motion.div
           className="absolute left-2 top-0 h-full w-1 bg-gradient-to-b from-indigo-400 to-purple-300 rounded-full"
           initial={{ scaleY: 0 }}

@@ -27,11 +27,12 @@ const projects = [
   {
     name: "Time Traveller Explorer",
     description: "A web app that lets you explore NASA's Astronomy Picture of the Day for any chosen date, with a cinematic video background for an immersive experience.",
-    image: "../src/assets/time.png",
+    image: "time.png",
     link: "https://github.com/MytriAryani/Time-Traveller-Explorer",
     tags: ["HTML", "CSS", "JS", "NASA'S API"],
   },
-  // ...more projects
+  
+
 ];
 
 
@@ -39,7 +40,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="w-full py-24 overflow-x-auto bg-white">
-      {/* Section Heading */}
+     
       <div className="px-8 mb-12">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-2">
           <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-600 bg-clip-text text-transparent">
@@ -50,7 +51,7 @@ export default function Projects() {
           A selection of my favorite work — crafted with creativity, code, and a passion.
         </p>
       </div>
-      {/* Project Gallery */}
+
       <div
         className="flex gap-8 px-4 md:px-8 hide-scrollbar"
         style={{

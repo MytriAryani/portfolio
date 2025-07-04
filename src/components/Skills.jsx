@@ -23,7 +23,7 @@ export default function Skills() {
       id="skills"
       className="relative w-full py-24 px-4 flex flex-col items-center justify-center max-w-5xl mx-auto bg-gradient-to-br from-indigo-50 via-white to-purple-100 overflow-hidden"
     >
-      {/* Floating animated gradient blob */}
+   
       <motion.div
         className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full z-0"
         initial={{ scale: 0.7, opacity: 0.4 }}
@@ -36,12 +36,12 @@ export default function Skills() {
         }}
       />
 
-      {/* Glass overlay for subtle depth */}
+     
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="w-full h-full bg-white/30 backdrop-blur-md rounded-3xl" />
       </div>
 
-      {/* Section Heading and animated accent */}
+     
       <div className="relative z-10 w-full flex flex-col items-center mb-10">
         <SectionHeading>Skills</SectionHeading>
         
@@ -50,7 +50,7 @@ export default function Skills() {
         </p>
       </div>
 
-      {/* Skills Grid */}
+    
       <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         {skills.map((skill, i) => (
           <motion.div

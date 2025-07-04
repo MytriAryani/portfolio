@@ -23,7 +23,7 @@ export default function Navbar() {
           Mytri Aryani
         </span>
 
-        {/* Desktop Nav */}
+      
         <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
           {navLinks.map(({ label, to }) => (
             <li key={to}>
@@ -37,7 +37,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hamburger Icon */}
         <button
           className="md:hidden text-indigo-700 text-2xl"
           onClick={toggleMenu}
@@ -47,7 +46,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+     
       {isOpen && (
         <div className="md:hidden bg-white border-t border-indigo-100 px-5 py-3 space-y-4 shadow-sm">
           {navLinks.map(({ label, to }) => (

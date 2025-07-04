@@ -7,7 +7,7 @@ export default function About() {
       id="about"
       className="relative w-full py-24 px-4 flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto bg-white overflow-hidden"
     >
-      {/* Animated blob accent (left background) */}
+    
       <motion.div
         className="absolute -left-24 top-1/3 w-64 h-64 rounded-full z-0"
         initial={{ scale: 0.8, opacity: 0.5 }}
@@ -20,9 +20,9 @@ export default function About() {
         }}
       />
 
-      {/* Left: Staggered stat cards with vertical accent */}
+   
       <div className="relative flex flex-col gap-8 md:gap-12 md:w-1/2 w-full items-center md:items-end z-10">
-        {/* Vertical accent bar */}
+       
         <motion.div
           className="absolute left-[-16px] top-0 bottom-0 w-2 rounded-full bg-gradient-to-b from-indigo-400 via-fuchsia-400 to-purple-400 opacity-80"
           initial={{ scaleY: 0.2, opacity: 0.5 }}
@@ -40,7 +40,7 @@ export default function About() {
           <span className="block text-3xl font-extrabold text-indigo-600 mb-1">Creative</span>
           <span className="block text-xs font-semibold text-gray-500 uppercase tracking-wider"></span>
         </motion.div>
-        {/* Bottom card */}
+       
         <motion.div
           className="relative bg-white/80 backdrop-blur-lg border border-purple-100 rounded-3xl shadow-xl px-8 py-7 w-60 md:w-72 mt-8 z-10"
           initial={{ opacity: 0, y: 60, scale: 0.97 }}
@@ -52,7 +52,7 @@ export default function About() {
         </motion.div>
       </div>
 
-      {/* Right: Updated About text card */}
+    
       <motion.div
         className="relative md:ml-[-3rem] mt-16 md:mt-0 md:w-1/2 w-full flex flex-col items-center md:items-start bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-indigo-100 px-8 py-12 z-20"
         initial={{ opacity: 0, x: 60, scale: 0.98 }}

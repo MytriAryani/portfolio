@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
-// Animated Confetti Burst
+
 function Confetti({ active }) {
   return (
     <svg
@@ -27,7 +27,7 @@ function Confetti({ active }) {
 export default function Contact() {
   const [confetti, setConfetti] = useState(false);
 
-  // Handle confetti burst on button click
+  
   const handleConfetti = () => {
     setConfetti(true);
     setTimeout(() => setConfetti(false), 900);
@@ -38,7 +38,7 @@ export default function Contact() {
       id="contact"
       className="relative py-24 px-4 flex flex-col items-center justify-center min-h-[70vh] bg-gradient-to-br from-indigo-50 via-white to-purple-100 overflow-hidden"
     >
-      {/* Animated gradient blob */}
+     
       <motion.div
         className="absolute -top-24 -right-24 w-80 h-80 rounded-full z-0"
         initial={{ scale: 0.7, opacity: 0.5 }}
@@ -51,17 +51,17 @@ export default function Contact() {
         }}
       />
 
-      {/* Glassy Card */}
+    
       <motion.div
         className="relative z-20 w-full max-w-xl rounded-3xl bg-white/70 backdrop-blur-lg shadow-2xl border border-indigo-100 px-8 py-12 flex flex-col items-center"
         initial={{ opacity: 0, y: 60, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Confetti */}
+      
         <Confetti active={confetti} />
 
-        {/* Animated accent line */}
+     
         <motion.div
           className="w-20 h-1 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mb-8"
           initial={{ scaleX: 0 }}
@@ -70,7 +70,7 @@ export default function Contact() {
           style={{ transformOrigin: "left" }}
         />
 
-        {/* Heading */}
+       
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 text-center">
           Let's Connect!
         </h2>
@@ -79,7 +79,7 @@ export default function Contact() {
           Drop me a message, say hi, or just share a meme!
         </p>
 
-        {/* Social icons */}
+        
         <div className="flex gap-8 text-3xl mb-7">
           <motion.a
             href="mailto:mytriaryani@gmail.com"
@@ -111,7 +111,7 @@ export default function Contact() {
           </motion.a>
         </div>
 
-        {/* CTA Button */}
+     
         <motion.button
           whileTap={{ scale: 0.97 }}
           whileHover={{ scale: 1.06 }}
@@ -131,7 +131,7 @@ export default function Contact() {
         </motion.button>
       </motion.div>
 
-      {/* Glass overlay for subtle depth */}
+   
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="w-full h-full bg-white/30 backdrop-blur-md rounded-3xl" />
       </div>
